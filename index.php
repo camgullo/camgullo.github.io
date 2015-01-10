@@ -236,62 +236,6 @@
 						
 					</div>
 
-
-<div id="contact-form" class="col-sm-7 scrollimation fade-left">
-<form method="post" action="index.php">
-        
-    <label class="control-label">Name</label>
-	<i class="icon-user"></i>
-	<input type="text" name="name" placeholder="My name is..." class="form-control input-lg requiredField" data-error-empty="Please enter your name" size="30" />        
-
-    <label class="control-label">Email</label>
-	<i class="icon-envelope"></i>
-	<input type="email" name="email" placeholder="Please respond at..." class="form-control input-lg requiredField" data-error-empty="Please enter your email" data-error-invalid="Invalid email address" size="30" />       
-
-    <label class="control-label">Message</label>
-	<i class="icon-comment"></i>
-	<textarea rows="5" cols="20" name="message" placeholder="I wanna talk about..." class="form-control input-lg requiredField" rows="5" data-error-empty="Please enter your message"></textarea>
-
-	<label class="control-label">*What is 2+2? (Anti-spam)</label>
-	<input name="human" placeholder="Type Here" class="form-control input-lg requiredField" data-error-empty="Please answer the question">
-
-    <button id="submit" name="submit" type="submit" value="Submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="icon-location-arrow"></i>Send Message</button>
-
-
-</form></div>
-
-
-<?php
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    $from = $_POST['email']; 
-    $to = 'cam@gullo.me'; 
-    $subject = 'gullo.me Contact Form';
-    $human = $_POST['human'];
-			
-    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-				
-	if ($_POST['submit']) {
-    if ($name != '' && $email != '') {
-        if ($human == '4') {				 
-            if (mail ($to, $subject, $body, $from)) { 
-	        echo '<p>Your message has been sent!</p>';
-	    } else { 
-	        echo '<p>Something went wrong, go back and try again!</p>'; 
-	    } 
-	} else if ($_POST['submit'] && $human != '4') {
-	    echo '<p>You answered the anti-spam question incorrectly!</p>';
-	}
-    } else {
-        echo '<p>You need to fill in all required fields!!</p>';
-    }
-}
-?>
-
-
-<!-- End contact-form -->
-				  
 				</div><!-- End row -->
 				
 			</div><!-- End container -->
