@@ -1,3 +1,3 @@
-camgullo.github.io
+http://cam.gul.io
 ==================
-My github pages Website
+This is my Personal / Portfolio website.
