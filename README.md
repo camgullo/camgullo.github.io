@@ -1,3 +1,3 @@
-http://cam.gul.io
+http://gullo.me
 ==================
 This is my Personal / Portfolio website.
